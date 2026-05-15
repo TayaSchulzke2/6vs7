@@ -9,8 +9,6 @@ let vida7 = 67;
 let atacar;
 let curar;
 let decisio;
-let min;
-let max; 
 
 
 
@@ -23,43 +21,24 @@ if (personatge == "6") {
         pregunta.toLowerCase();
         pregunta.trim();
         if (pregunta == "atacar") {
-            atacar= function getRandomInclusive(min,max){
-                min= Math.ceil(10); 
-                max= Math.floor(20); 
-                return Math.floor(Math.random()*(max-min+1)+min);
-            };
+            atacar = parseInt(Math.random() * (21 - 10) + 10);
             vida7 = vida7 - atacar;
-            alert("Has fet " + atacar + " de vida a" + robot + "\nVida:\n 6:" + vida6 + "\n 7:" + vida7);
+            alert("Has llevat  " + atacar + " punts de vida a " + robot + "\nVida:\n 6:" + vida6 + "\n 7:" + vida7);
         } else if (pregunta == "curar") {
-            curar =function getRandomInclusive(min,max){
-                min= Math.ceil(5); 
-                max= Math.floor(15); 
-                return Math.floor(Math.random()*(max-min+1)+min);
-            };
+            curar = parseInt(Math.random() * (16 - 5) + 5);
+
             vida6 = vida6 + curar;
-            alert("T'has curat " + curar + " de vida\nVida:\n 6:" + vida6 + "\n 7:" + vida7);
+            alert("T'has curat " + curar + " punts de vida\nVida:\n 6:" + vida6 + "\n 7:" + vida7);
         }
-        decisio = function getRandomInclusive(min,max){
-                min= Math.ceil(1); 
-                max= Math.floor(2); 
-                return Math.floor(Math.random()*(max-min+1)+min);
-            };
-        if (pregunta == 1) {
-             atacar= function getRandomInclusive(min,max){
-                min= Math.ceil(10); 
-                max= Math.floor(20); 
-                return Math.floor(Math.random()*(max-min+1)+min);
-            };
+        decisio = parseInt(Math.random() * (11 - 1) + 1);
+        if (decisio <= 5) {
+            atacar = parseInt(Math.random() * (21 - 10) + 10);
             vida6 = vida6 - atacar;
-            alert(robot + " t'ha fet" + atacar + " de vida.\nVida:\n 6:" + vida6 + "\n 7:" + vida7);
-        } else if (pregunta == 2) {
-            curar =function getRandomInclusive(min,max){
-                min= Math.ceil(5); 
-                max= Math.floor(15); 
-                return Math.floor(Math.random()*(max-min+1)+min);
-            };
+            alert(robot + " t'ha llevat " + atacar + " punts de vida.\nVida:\n 6:" + vida6 + "\n 7:" + vida7);
+        } else if (decisio > 5) {
+            curar = parseInt(Math.random() * (16 - 5) + 5);
             vida7 = vida7 + curar;
-            alert(robot + " s'ha curat " + curar + " de vida\nVida:\n 6:" + vida6 + "\n 7:" + vida7);
+            alert(robot + " s'ha curat " + curar + " punts de vida\nVida:\n 6:" + vida6 + "\n 7:" + vida7);
         }
     }
     if (vida6 <= 0) {
@@ -68,51 +47,31 @@ if (personatge == "6") {
         alert("Has guanyat!\nT'has quedat amb ha guanyat amb " + vida6 + " punts de vida");
     }
 
-} else{
+} else {
     robot = "6";
     alert("vida:\n 6:" + vida6 + "\n 7:" + vida7);
-     while (vida6 > 0 && vida7 > 0) {
+    while (vida6 > 0 && vida7 > 0) {
         pregunta = prompt("Vols atacar o curar-te? (tot en minúscula)");
         pregunta.toLowerCase();
         pregunta.trim();
         if (pregunta == "atacar") {
-            atacar= function getRandomInclusive(min,max){
-                min= Math.ceil(10); 
-                max= Math.floor(20); 
-                return Math.floor(Math.random()*(max-min+1)+min);
-            };
+            atacar = parseInt(Math.random() * (21 - 10) + 10);
             vida6 = vida6 - atacar;
-            alert("Has fet " + atacar + " de vida a" + robot + "\nVida:\n 6:" + vida6 + "\n 7:" + vida7);
+            alert("Has llevat  " + atacar + " punts de vida a " + robot + "\nVida:\n 6:" + vida6 + "\n 7:" + vida7);
         } else if (pregunta == "curar") {
-            curar =function getRandomInclusive(min,max){
-                min= Math.ceil(5); 
-                max= Math.floor(15); 
-                return Math.floor(Math.random()*(max-min+1)+min);
-            };
+            curar = parseInt(Math.random() * (16 - 5) + 5);
             vida7 = vida7 + curar;
-            alert("T'has curat " + curar + " de vida\nVida:\n 6:" + vida6 + "\n 7:" + vida7);
+            alert("T'has curat " + curar + " punts de vida\nVida:\n 6:" + vida6 + "\n 7:" + vida7);
         }
-        decisio =function getRandomInclusive(min,max){
-                min= Math.ceil(1); 
-                max= Math.floor(2); 
-                return Math.floor(Math.random()*(max-min+1)+min);
-            };
-        if (pregunta == 1) {
-            atacar= function getRandomInclusive(min,max){
-                min= Math.ceil(10); 
-                max= Math.floor(20); 
-                return Math.floor(Math.random()*(max-min+1)+min);
-            };
+        decisio =parseInt(Math.random() * (11 - 1) + 1);
+        if (decisio <= 5) {
+            atacar = parseInt(Math.random() * (21 - 10) + 10);
             vida7 = vida7 - atacar;
-            alert(robot + " t'ha fet" + atacar + " de vida.\nVida:\n 6:" + vida6 + "\n 7:" + vida7);
-        } else if (pregunta == 2) {
-            curar =function getRandomInclusive(min,max){
-                min= Math.ceil(5); 
-                max= Math.floor(15); 
-                return Math.floor(Math.random()*(max-min+1)+min);
-            };
+            alert(robot + " t'ha llevat " + atacar + " punts de vida.\nVida:\n 6:" + vida6 + "\n 7:" + vida7);
+        } else if (decisio > 5) {
+            curar =parseInt( Math.random() * (16 - 5) + 5);
             vida6 = vida6 + curar;
-            alert(robot + " s'ha curat " + curar + " de vida\nVida:\n 6:" + vida6 + "\n 7:" + vida7);
+            alert(robot + " s'ha curat " + curar + " punts de vida\nVida:\n 6:" + vida6 + "\n 7:" + vida7);
         }
     }
     if (vida7 <= 0) {
