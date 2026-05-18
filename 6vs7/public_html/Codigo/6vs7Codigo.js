@@ -17,7 +17,7 @@ if (personatge == "6") {
     robot = "7";
     alert("Vida:\n 6:" + vida6 + "\n 7:" + vida7);
     while (vida6 > 0 && vida7 > 0) {
-        pregunta = prompt("Vols atacar o curar-te? (tot en minúscula)");
+        pregunta = prompt("Vols atacar o curar-te(posa 'curar')? (tot en minúscula)");
         pregunta.toLowerCase();
         pregunta.trim();
         if (pregunta == "atacar") {
@@ -29,6 +29,8 @@ if (personatge == "6") {
 
             vida6 = vida6 + curar;
             alert("T'has curat " + curar + " punts de vida\nVida:\n 6:" + vida6 + "\n 7:" + vida7);
+        }else{
+            alert("Et quedes sense torn per beneit");
         }
         decisio = parseInt(Math.random() * (11 - 1) + 1);
         if (decisio <= 5) {
@@ -51,7 +53,7 @@ if (personatge == "6") {
     robot = "6";
     alert("vida:\n 6:" + vida6 + "\n 7:" + vida7);
     while (vida6 > 0 && vida7 > 0) {
-        pregunta = prompt("Vols atacar o curar-te? (tot en minúscula)");
+        pregunta = prompt("Vols atacar o curar-te(posa 'curar')? (tot en minúscula)");
         pregunta.toLowerCase();
         pregunta.trim();
         if (pregunta == "atacar") {
@@ -62,6 +64,8 @@ if (personatge == "6") {
             curar = parseInt(Math.random() * (16 - 5) + 5);
             vida7 = vida7 + curar;
             alert("T'has curat " + curar + " punts de vida\nVida:\n 6:" + vida6 + "\n 7:" + vida7);
+        }else{
+            alert("Et quedes sense torn per beneit");
         }
         decisio =parseInt(Math.random() * (11 - 1) + 1);
         if (decisio <= 5) {
