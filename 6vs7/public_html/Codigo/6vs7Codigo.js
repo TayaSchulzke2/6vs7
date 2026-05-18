@@ -49,7 +49,7 @@ if (personatge == "6") {
         alert("Has guanyat!\nT'has quedat amb ha guanyat amb " + vida6 + " punts de vida");
     }
 
-} else {
+} else if (personatge == "7") {
     robot = "6";
     alert("vida:\n 6:" + vida6 + "\n 7:" + vida7);
     while (vida6 > 0 && vida7 > 0) {
@@ -83,4 +83,6 @@ if (personatge == "6") {
     } else if (vida6 <= 0) {
         alert("Has guanyat!\nT'has quedat amb ha guanyat amb " + vida6 + " punts de vida");
     }
+}else {
+    alert("Per no escriure bé un número et quedes sense jugar.")
 }
