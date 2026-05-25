@@ -81,6 +81,6 @@ if (personatge == "6") {
     if (vida7 <= 0) {
         alert("Has perdut!\n El jugador " + robot + " ha guanyat amb " + vida7 + " punts de vida");
     } else if (vida6 <= 0) {
-        alert("Has guanyat!\nT'has quedat amb ha guanyat amb " + vida6 + " punts de vida");
+        alert("Has guanyat!\nT'has quedat amb " + vida6 + " punts de vida");
     }
 }
